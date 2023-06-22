@@ -1,4 +1,5 @@
-﻿using NBitcoin.Crypto;
+﻿using NBitcoin;
+using NBitcoin.Crypto;
 using NBitcoin.DataEncoders;
 using NBitcoin.Protocol;
 using NBitcoin.RPC;

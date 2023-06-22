@@ -23,11 +23,11 @@
 		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
 		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <NoWarn>1591;1573;1572;1584;1570;3021</NoWarn>
+    <Configurations>Release;Debug</Configurations>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\NBitcoin\NBitcoin.csproj" />
-		<PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
 	</ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">

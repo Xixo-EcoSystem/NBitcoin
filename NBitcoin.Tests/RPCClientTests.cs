@@ -67,7 +67,7 @@ namespace NBitcoin.Tests
 				Assert.NotNull(response.Result);
 				var copy = RPCCredentialString.Parse(rpc.CredentialString.ToString());
 				copy.Server = rpc.Address.AbsoluteUri;
-				rpc = new RPCClient(copy, null as string, builder.Network);
+				rpc = new RPCClient(rpc.CredentialString, null as string, builder.Network);
 				response = rpc.SendCommand(RPCOperations.getblockchaininfo);
 				Assert.NotNull(response.Result);
 			}
@@ -470,7 +470,7 @@ namespace NBitcoin.Tests
 				var firstTx = secondBlock.Transactions.First();
 
 				var txInfo = rpc.GetRawTransactionInfo(firstTx.GetHash());
-
+				
 				Assert.Equal(101U, txInfo.Confirmations);
 				Assert.Equal(secondBlockHash, txInfo.BlockHash);
 				Assert.Equal(firstTx.GetHash(), txInfo.TransactionId);

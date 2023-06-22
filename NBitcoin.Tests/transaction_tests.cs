@@ -749,6 +749,9 @@ namespace NBitcoin.Tests
 			builder.SetChange(p2sh);
 			var signedTx = builder.BuildTransaction(true);
 			Assert.True(builder.Verify(signedTx));
+
+
+
 		}
 
 		[Fact]

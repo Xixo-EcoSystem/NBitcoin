@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
-
-namespace NBitcoin.Tests
+using NBitcoin.Altcoins;
+namespace BitcoinTest.Tests
 {
 	public class NodeBuilderEx
 	{
@@ -78,7 +78,7 @@ namespace NBitcoin.Tests
 		{
 			ServicePointManager.Expect100Continue = true;
 			ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-			var builder = NodeBuilder.Create(nodeDownloadData, Altcoins.AltNetworkSets.Bitcoin.Regtest, caller);
+			var builder = NodeBuilder.Create(nodeDownloadData, AltNetworkSets.Bitcoin.Regtest, caller);
 			return builder;
 		}
 	}
